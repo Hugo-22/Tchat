@@ -3,9 +3,16 @@
   }
   
   body {
-    background-color: #edeff2;
+    background-color: #bdc3c7;
     font-family: "Calibri", "Roboto", sans-serif;
   }
+  
+  .text-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
 
   .chat_window {
     position: absolute;
@@ -23,7 +30,7 @@
   }
   
   .top_menu {
-    background-color: #fff;
+    background-color: #2d3436;
     width: 100%;
     padding: 20px 0 15px;
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
@@ -53,6 +60,13 @@
     text-align: center;
     color: #bcbdc0;
     font-size: 20px;
+  }
+  .button-logout {
+    width: 16px;
+      background-color: #df221be7;
+      height: 16px;
+    border-radius: 50%;
+
   }
   
   .messages {

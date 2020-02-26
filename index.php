@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'connexion.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,6 +19,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/css/mdb.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bubbles.css">
+
 
     <title>Tchat</title>
 </head>
@@ -22,7 +29,7 @@
 <div class="chat_window">
         <div class="top_menu">
             <div class="buttons">
-                <div class="button"></div>
+                <a class="button" href="logout.php"></a>
                 <div class="button minimize"></div>
                 <div class="button maximize"></div>
             </div>
@@ -41,10 +48,6 @@
             </div>
         </div>
     </div>
-                <!-- <div class="text-area">
-
-                </div> -->
-
 
     <script>
         function load(){
@@ -86,6 +89,7 @@ xhr.send();
     
     $('#submit').click(function() {
         
+        
         let message = encodeURIComponent($('#msg').val());
 
         if(message != ""){
@@ -99,6 +103,7 @@ xhr.send();
     
     load();
 });
+
 	</script>
 </body>
 </html>
