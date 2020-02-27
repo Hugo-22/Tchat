@@ -11,11 +11,11 @@ $name = $_SESSION['name'];
 
         if ($name === $row['name']) {
 
-            echo '<p class="text-right from-me"> '.$row['message'].' <li class="text-right time"> '.$row['time'].' '.$row['date'].' </li></p>';
+            echo '<p class="from-me"> '.$row['message'].' <li class="text-right time"> '.$row['time'].' '.$row['date'].' </li></p>';
             
         } else {
             
-            echo "<li class='text-left from'> ".$row['name']." </li>";
+            echo "<li class='from'> ".$row['name']." </li>";
             echo '<p class="text-left from-them"> '.$row['message'].' <li class="text-left time"> '.$row['time'].' '.$row['date'].' </li> </p>';
         }
 

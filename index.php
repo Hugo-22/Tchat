@@ -81,7 +81,6 @@ xhr.send();
 
 }
 
-
     window.onload = function(){
 
 let xhr = new XMLHttpRequest();

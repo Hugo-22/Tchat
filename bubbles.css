@@ -8,31 +8,22 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
   }
-  
-  .text-right {
-    /* align-self: end; */
-  }
+
   .from {
       font-size: 12px;
       font-weight: bold;
       font-style: italic;
+      max-width: 35%;
   }
   .time {
     font-size: 10px;
     font-style: italic;
-    color: gray;  
-  }
-
-  .text-left {
-      align-self: flex-start;
+    color: gray;
   }
 
   p {
-    /* max-width: 255px; */
-    overflow-wrap: break-word;
-    white-space: nowrap;
     margin-bottom: 5px;
     line-height: 24px;
     position: relative;
@@ -40,18 +31,11 @@ body {
     border-radius: 25px;
   }
   
-  /* p:before,
-    p:after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      height: 20px;
-    } */
-  
   .from-me {
     color: white;
     background: #18ae1a;
     align-self: flex-end;
+    max-width: 35%;
   }
   
   .from-me:before {

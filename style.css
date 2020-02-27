@@ -12,8 +12,6 @@
     flex-direction: column;
   }
 
-  
-
   .connected {
     color: white;
     margin-right: 10px;
@@ -94,7 +92,7 @@
     padding: 20px 10px 0 10px;
     margin: 0;
     height: 347px;
-    overflow: auto;
+    overflow: scroll;
   }
   .messages .message {
     clear: both;
