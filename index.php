@@ -21,19 +21,23 @@ include 'connexion.php';
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bubbles.css">
 
-
     <title>Tchat</title>
 </head>
 <body>
-    
+
 <div class="chat_window">
         <div class="top_menu">
             <div class="buttons">
-                <a class="button" href="logout.php"></a>
+                <a class="button" href="logout.php" title="Déconnexion"></a>
                 <div class="button minimize"></div>
                 <div class="button maximize"></div>
             </div>
             <div class="title">Tchat</div>
+            <div class="connected">
+            <?php
+            echo "<span class='connected-circle'></span>" . $_SESSION['name'];
+            ?>
+            </div>
         </div>
         <ul class="messages text-area"></ul>
         <div class="bottom_wrapper clearfix">
@@ -43,13 +47,22 @@ include 'connexion.php';
         <div class="send_message1">
             <div class="icon"></div>
 
-            <input class="send_message" type="button" id="submit">
+            <input class="send_message" type="button" id="submit" onclick="scrollWin(0, 1000)">
 
             </div>
         </div>
     </div>
 
     <script>
+        const textArea = document.querySelector(".text-area");
+        
+        function scrollWin(x, y) {
+            textArea.scrollBy({
+            top: 1000,
+            behavior: 'smooth'
+        })
+    }
+
         function load(){
 
 let xhr = new XMLHttpRequest();
@@ -99,6 +112,7 @@ xhr.send();
         type : "POST",
         data : "message=" + message
         });
+        $('#msg').val(" ");
     }
     
     load();

@@ -12,7 +12,7 @@ body {
   }
   
   .text-right {
-    align-self: end;
+    /* align-self: end; */
   }
   .from {
       font-size: 12px;
@@ -22,9 +22,8 @@ body {
   .time {
     font-size: 10px;
     font-style: italic;
-    color: gray;
+    color: gray;  
   }
-
 
   .text-left {
       align-self: flex-start;
@@ -52,7 +51,7 @@ body {
   .from-me {
     color: white;
     background: #18ae1a;
-    /* align-self: flex-end; */
+    align-self: flex-end;
   }
   
   .from-me:before {

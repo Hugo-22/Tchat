@@ -16,8 +16,7 @@ $name = $_SESSION['name'];
         } else {
             
             echo "<li class='text-left from'> ".$row['name']." </li>";
-            echo '<p class="text-left from-them"> '.$row['message'].'</p>';
-            echo "<li class='text-left'> ".$row['time']." ".$row['date']." </li>";
+            echo '<p class="text-left from-them"> '.$row['message'].' <li class="text-left time"> '.$row['time'].' '.$row['date'].' </li> </p>';
         }
 
     }
