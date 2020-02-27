@@ -57,6 +57,7 @@ body {
   .from-them {
     background: #0b93f6;
     color: white;
+    max-width: 35%;
   }
   .from-them:before {
       left: -7px;
