@@ -47,21 +47,13 @@ include 'connexion.php';
         <div class="send_message1">
             <div class="icon"></div>
 
-            <input class="send_message" type="button" id="submit" onclick="scrollWin(0, 1000)">
+            <input class="send_message" type="button" id="submit">
 
             </div>
         </div>
     </div>
 
     <script>
-        const textArea = document.querySelector(".text-area");
-        
-        function scrollWin(x, y) {
-            textArea.scrollBy({
-            top: 1000,
-            behavior: 'smooth'
-        })
-    }
 
         function load(){
 
@@ -72,7 +64,9 @@ xhr.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
   //   document.getElementById("text-area").innerHTML =
   //   this.responseText;
-    const textArea = document.querySelector(".text-area").innerHTML = this.responseText;
+    let textArea = document.querySelector(".text-area").innerHTML = this.responseText;
+    let chat_scroll = document.querySelector(".text-area");
+    chat_scroll.scrollBy(0, 1000000);
   }
 };
 
@@ -90,7 +84,9 @@ xhr.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
   //   document.getElementById("text-area").innerHTML =
   //   this.responseText;
-    const textArea = document.querySelector(".text-area").innerHTML = this.responseText;
+    let textArea = document.querySelector(".text-area").innerHTML = this.responseText;
+    let chat_scroll = document.querySelector(".text-area");
+    chat_scroll.scrollBy(0, 1000000);
   }
 };
 

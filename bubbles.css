@@ -58,6 +58,7 @@ body {
     background: #0b93f6;
     color: white;
     max-width: 35%;
+    align-self: flex-start;
   }
   .from-them:before {
       left: -7px;
@@ -68,7 +69,7 @@ body {
     }
   .from-them:after {
       left: 4px;
-      width: 26px;
+      /* width: 26px; */
       background: white;
       border-bottom-right-radius: 10px;
       -webkit-transform: translate(-30px, -2px);

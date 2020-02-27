@@ -10,7 +10,7 @@ if (!empty($_POST['message'])) {
         
         $id_name = $row_id['id'];
     }
-    $message = $_POST['message'];
+    $message = addslashes($_POST['message']);
     
     $time = date("H:i:s");
     $date = date("d/m/Y");
